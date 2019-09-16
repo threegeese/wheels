@@ -45,9 +45,7 @@ const expect = chai.expect
 
   let spy = chai.spy(function () {})
   gButton.$on('click', spy)
-
-  let button = gButton.$el
-  button.click()
+  gButton.$emit('click')
 
   expect(spy).to.have.been.called()
 }
